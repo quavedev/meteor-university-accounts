@@ -1,0 +1,30 @@
+{
+  "name": "meteor-university-accounts",
+  "private": true,
+  "scripts": {
+    "quave-eslint": "eslint . --fix"
+  },
+  "devDependencies": {
+    "@quave/eslint-config-quave": "^1.0.7",
+    "prettier": "^2.7.1",
+    "prettier-plugin-tailwindcss": "^0.1.13"
+  },
+  "eslintConfig": {
+    "extends": [
+      "@quave/quave"
+    ]
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "meteor npm test && lint-staged",
+      "post-commit": "git update-index --again"
+    }
+  },
+  "lint-staged": {
+    "*.{js|jsx}": [
+      "eslint --fix",
+      "prettier --write",
+      "git add"
+    ]
+  }
+}
