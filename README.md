@@ -36,3 +36,10 @@ Video: 3.3
 Video: 3.4
 
 - Updated React from 17 to 18
+
+
+### 05 - Update heroicons to 2
+
+Video: 3.5
+
+- Updated heroicons from 1 to 2
