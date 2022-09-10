@@ -14,10 +14,14 @@ On each folder we have the code that corresponds with the final state in each vi
 - Update TailwindCSS from v2 to v3
 - Set up Prettier and ESLint
 
+After the video I also changed a few things:
+
+- Removed tests
+- Fixed ESLint errors and set up
+- Fixed Prettier set up
+- Rename jsx files to js
+
 ### 03 - Update to React 18 and improve files set up
 
-- Remove tests
-- Fix ESLint errors
-- Rename jsx files to js
 - Update React from 17 to 18
 - Remove imports folder

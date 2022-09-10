@@ -2,7 +2,9 @@
   "name": "meteor-university-accounts",
   "private": true,
   "scripts": {
-    "quave-eslint": "eslint . --fix"
+    "quave-eslint": "DEBUG=eslint:cli-engine eslint . --fix",
+    "quave-prettier": "prettier --write \"**/*.js\"",
+    "quave-check": "npm run quave-eslint && npm run quave-prettier"
   },
   "devDependencies": {
     "@quave/eslint-config-quave": "^1.0.7",
@@ -21,7 +23,7 @@
     }
   },
   "lint-staged": {
-    "**/*.js?(x)": [
+    "**/*.js": [
       "eslint --fix",
       "prettier --write",
       "git add"

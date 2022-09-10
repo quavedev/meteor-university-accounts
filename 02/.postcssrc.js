@@ -1,5 +1,5 @@
 // ..postcssrc.js
-module.exports = ctx => {
+module.exports = (ctx) => {
   // This flag is set when loading configuration by this package
   if (ctx.meteor) {
     const config = {
