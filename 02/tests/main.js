@@ -1,5 +1,5 @@
 import assert from 'assert';
-
+// comment
 describe('meteor-wallet', function () {
   it('package.json has correct name', async function () {
     const { name } = await import('../package.json');
