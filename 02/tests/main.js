@@ -1,5 +1,6 @@
+import { Meteor } from 'meteor/meteor';
 import assert from 'assert';
-// comment 2
+
 describe('meteor-wallet', function () {
   it('package.json has correct name', async function () {
     const { name } = await import('../package.json');
