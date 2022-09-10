@@ -6,12 +6,16 @@ We started from [Section 2 final code](https://github.com/dyarleniber/collection
 
 On each folder we have the code that corresponds with the final state in each video.
 
+Below we list a summary of the changes made on each video, but you should check https://university.meteor.com for full details.
+
 ## Folders
 
 ### 02 - Update Meteor, TailwindCSS and Set up Prettier & ESLint
 
-- Update Meteor from 2.5.1 to 2.7.3
-- Update TailwindCSS from v2 to v3
+Video: 3.2
+
+- Updated Meteor from 2.5.1 to 2.7.3
+- Updated TailwindCSS from v2 to v3
 - Set up Prettier and ESLint
 
 After the video I also changed a few things:
@@ -19,9 +23,16 @@ After the video I also changed a few things:
 - Removed tests
 - Fixed ESLint errors and set up
 - Fixed Prettier set up
-- Rename jsx files to js
+- Renamed jsx files to js
 
-### 03 - Update to React 18 and improve files set up
+### 03 - Remove imports folder
 
-- Update React from 17 to 18
-- Remove imports folder
+Video: 3.3
+
+- Removed imports folder
+
+### 04 - Update React to 18
+
+Video: 3.4
+
+- Updated React from 17 to 18
