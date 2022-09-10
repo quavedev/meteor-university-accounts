@@ -6,7 +6,7 @@ Meteor.publish('allContacts', function publishAllContacts() {
 });
 
 Meteor.publish('contacts', function publishContacts() {
-  const contacts = ContactsCollection.find(
+  return ContactsCollection.find(
     { archived: { $ne: true } },
     {
       fields: {
@@ -14,5 +14,4 @@ Meteor.publish('contacts', function publishContacts() {
       },
     }
   );
-  return contacts;
 });
