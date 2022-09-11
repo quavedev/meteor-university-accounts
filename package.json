@@ -6,6 +6,9 @@
     "quave-prettier": "prettier --write \"**/*.js\"",
     "quave-check": "npm run quave-eslint && npm run quave-prettier"
   },
+  "dependencies": {
+    "tailwindcss": "^3.1.8"
+  },
   "devDependencies": {
     "@quave/eslint-config-quave": "^1.0.7",
     "prettier": "^2.7.1",
