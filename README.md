@@ -43,3 +43,15 @@ Video: 3.4
 Video: 3.5
 
 - Updated heroicons from 1 to 2
+
+### 06 - Sign up with Password
+
+Video: 3.6
+
+- Added accounts-password package
+- Sign up implementation with Accounts.createUser from accounts-password
+- Installed React Router
+- Set up our main routes
+- Installed quave:logged-user-react to get logged user from Meteor with a nice React Hook
+- Meteor.logout
+
