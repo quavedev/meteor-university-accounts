@@ -36,6 +36,10 @@ export const Access = () => {
     });
   };
 
+  const forgotPassword = () => {
+    Accounts.forgotPassword({ email }, (err) => console.error(err));
+  };
+
   return (
     <div className="flex flex-col items-center">
       <h3 className="px-3 py-2 text-lg text-base font-medium">
@@ -113,6 +117,16 @@ export const Access = () => {
               : "If you don't an account, click here"}
           </a>
         </div>
+        {!isSignUp && (
+          <div className="py-3">
+            <a
+              className="cursor-pointer text-indigo-800"
+              onClick={forgotPassword}
+            >
+              forgot your password?
+            </a>
+          </div>
+        )}
       </form>
     </div>
   );
