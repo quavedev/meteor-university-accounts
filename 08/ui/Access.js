@@ -113,6 +113,15 @@ export const Access = () => {
               : "If you don't an account, click here"}
           </a>
         </div>
+
+        <div className="py-3">
+          <a
+            className="cursor-pointer text-indigo-800"
+            onClick={() => navigate(RoutePaths.FORGOT_PASSWORD)}
+          >
+            Forgot password?
+          </a>
+        </div>
       </form>
     </div>
   );
