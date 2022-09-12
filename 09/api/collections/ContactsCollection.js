@@ -23,6 +23,9 @@ const ContactsSchema = new SimpleSchema({
     type: String,
     // regEx: SimpleSchema.RegEx.Id,
   },
+  userId: {
+    type: String,
+  },
   createdAt: {
     type: Date,
   },

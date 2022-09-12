@@ -23,9 +23,6 @@ TransactionsCollection.before.insert(function (userId, transactionDocument) {
     WalletsCollection.update(transactionDocument.sourceWalletId, {
       $inc: { balance: -transactionDocument.amount },
     });
-    WalletsCollection.update(transactionDocument.destinationWalletId, {
-      $inc: { balance: transactionDocument.amount },
-    });
   }
   if (transactionDocument.type === ADD_TYPE) {
     const sourceWallet = WalletsCollection.findOne(
@@ -49,7 +46,7 @@ const TransactionsSchema = new SimpleSchema({
     type: String,
     // regEx: SimpleSchema.RegEx.Id,
   },
-  destinationWalletId: {
+  destinationContactId: {
     type: String,
     optional: true,
     // regEx: SimpleSchema.RegEx.Id,
