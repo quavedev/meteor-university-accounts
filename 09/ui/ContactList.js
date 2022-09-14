@@ -5,7 +5,7 @@ import { useSubscribe, useFind } from 'meteor/react-meteor-data';
 import { Loading } from './components/Loading';
 
 export const ContactList = () => {
-  const isLoading = useSubscribe('contacts');
+  const isLoading = useSubscribe('myContacts');
   const contacts = useFind(() =>
     ContactsCollection.find(
       { archived: { $ne: true } },

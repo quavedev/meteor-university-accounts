@@ -4,6 +4,10 @@ import { ContactsCollection } from '../collections/ContactsCollection';
 
 Meteor.methods({
   'contacts.insert'({ name, email, imageUrl, walletId }) {
+    const { userId } = this;
+    if (!userId) {
+      throw Meteor.Error('Access denied');
+    }
     check(name, String);
     check(email, String);
     check(imageUrl, String);
@@ -20,6 +24,7 @@ Meteor.methods({
       imageUrl,
       walletId,
       createdAt: new Date(),
+      userId,
     });
   },
   'contacts.archive'({ contactId }) {
