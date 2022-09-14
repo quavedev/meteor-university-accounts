@@ -15,6 +15,7 @@ Accounts.onCreateUser((options, user) => {
   WalletsCollection.insert({ userId: user._id, createdAt: new Date() });
 
   customizedUser.email = user.emails[0].address;
+
   return customizedUser;
 });
 
