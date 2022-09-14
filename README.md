@@ -55,3 +55,38 @@ Video: 3.6
 - Installed quave:logged-user-react to get logged user from Meteor with a nice React Hook
 - Meteor.logout
 
+### 07 - Sign In with Password
+
+Video: 3.7
+
+- Sign in implementation with Meteor.loginWithPassword
+
+### 08 - Reset Password
+
+Video: 3.8
+
+- Started the process with Accounts.forgotPassword
+- Sent the email using quave:email-postmark
+- Customized the route using Accounts.urls.resetPassword
+- Showed alerts across routes with quave:alert-react-tailwind
+  - added classes from Alert to tailwind.config.js `safelist`
+- Called Accounts.resetPassword with token and new password
+
+### 09 - Customizing user creation
+
+Video: 3.9
+
+- Removed startup wallet creation
+- Created Wallet when the user is created using Accounts.onCreateUser
+- Added userId to Wallet, Transaction and Contact
+- Changed publications of wallet and contacts to filter by userId
+- Changed home page to a Welcome page when no user is logged in
+- Added a new email property to the user using Accounts.onCreateUser
+- Changed the way to publish user fields using Accounts.setDefaultPublishFields
+
+### 10 - Protected Routes
+
+Video: 3.10
+
+- New component LoggedUserOnly: only render the route element for logged users, otherwise redirects.
+- New component AnonymousOnly: only render the route element for non-logged users, otherwise redirects.
