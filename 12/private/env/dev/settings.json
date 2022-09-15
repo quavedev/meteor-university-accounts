@@ -1,0 +1,8 @@
+{
+  "packages": {
+    "quave:email-postmark": {
+      "from": "noreply@codeftw.dev",
+      "apiToken": "fedd0c18-5c64-46c2-91f7-6070858e7249"
+    }
+  }
+}
