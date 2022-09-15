@@ -90,3 +90,13 @@ Video: 3.10
 
 - New component LoggedUserOnly: only render the route element for logged users, otherwise redirects.
 - New component AnonymousOnly: only render the route element for non-logged users, otherwise redirects.
+
+### 11 - User Roles
+
+Video: 3.11
+
+- Installed alanning:roles package to add roles to our users
+- Created role admin using Roles.createRole
+- Created a method to check if the user is admin
+- Used Roles.userIsInRole(userId, WalletRoles.ADMIN) to check if the user is allowed to perform a transaction removal
+- Created the component AdminOnly to prevent non-admins to access remove transaction page

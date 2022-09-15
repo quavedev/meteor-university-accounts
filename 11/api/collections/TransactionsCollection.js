@@ -23,7 +23,28 @@ TransactionsCollection.before.insert(function (userId, transactionDocument) {
     WalletsCollection.update(transactionDocument.sourceWalletId, {
       $inc: { balance: -transactionDocument.amount },
     });
-    WalletsCollection.update(transactionDocument.destinationContactId, {
+  }
+  if (transactionDocument.type === ADD_TYPE) {
+    const sourceWallet = WalletsCollection.findOne(
+      transactionDocument.sourceWalletId
+    );
+    if (!sourceWallet) {
+      throw new Meteor.Error('Source wallet not found.');
+    }
+    WalletsCollection.update(transactionDocument.sourceWalletId, {
+      $inc: { balance: transactionDocument.amount },
+    });
+  }
+});
+TransactionsCollection.before.remove(function (userId, transactionDocument) {
+  if (transactionDocument.type === TRANSFER_TYPE) {
+    const sourceWallet = WalletsCollection.findOne(
+      transactionDocument.sourceWalletId
+    );
+    if (!sourceWallet) {
+      throw new Meteor.Error('Source wallet not found.');
+    }
+    WalletsCollection.update(transactionDocument.sourceWalletId, {
       $inc: { balance: transactionDocument.amount },
     });
   }
@@ -35,7 +56,7 @@ TransactionsCollection.before.insert(function (userId, transactionDocument) {
       throw new Meteor.Error('Source wallet not found.');
     }
     WalletsCollection.update(transactionDocument.sourceWalletId, {
-      $inc: { balance: transactionDocument.amount },
+      $inc: { balance: -transactionDocument.amount },
     });
   }
 });
