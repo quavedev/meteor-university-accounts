@@ -100,3 +100,20 @@ Video: 3.11
 - Created a method to check if the user is admin
 - Used Roles.userIsInRole(userId, WalletRoles.ADMIN) to check if the user is allowed to perform a transaction removal
 - Created the component AdminOnly to prevent non-admins to access remove transaction page
+
+### 12 - Passwordless
+
+Video: 3.12
+
+- Installed quave:accounts-passwordless-react
+- Replaced Access component's content by component.
+- Removed the other routes like ForgotPassword and ResetPassword.
+
+### 13 - Google Authentication
+
+Video: 3.13
+
+- Installed accounts-google
+- Changed Access page to show Google as well
+- Set up domain restriction in the authentication
+

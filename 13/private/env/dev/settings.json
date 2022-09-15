@@ -4,5 +4,7 @@
       "from": "noreply@codeftw.dev",
       "apiToken": "fedd0c18-5c64-46c2-91f7-6070858e7249"
     }
-  }
+  },
+  "googleClientId": "515790345640-ibm2k2sqhbfcjq1f7fivt4i7vmr1j2vv.apps.googleusercontent.com",
+  "googleSecret": "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"
 }
